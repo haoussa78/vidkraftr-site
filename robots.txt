@@ -1,0 +1,28 @@
+# VidKraftr robots.txt
+User-agent: *
+Allow: /
+Allow: /llms.txt
+Disallow: /app/
+Disallow: /auth/
+
+# Allow AI crawlers
+User-agent: GPTBot
+Allow: /
+
+User-agent: Claude-Web
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Googlebot
+Allow: /
+
+# Block scrapers
+User-agent: NeevaBot
+Disallow: /
+
+User-agent: PhindBot
+Disallow: /
+
+Sitemap: https://vidkraftr.co/sitemap.xml

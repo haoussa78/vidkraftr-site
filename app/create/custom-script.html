@@ -1,0 +1,1611 @@
+<!DOCTYPE html><!--  This site was created in Webflow. https://webflow.com  --><!--  Last Published: Mon Mar 16 2026 23:34:11 GMT+0000 (Coordinated Universal Time)  -->
+<html data-wf-page="6856b970c0e2c8d0c64ab5c3" data-wf-site="6831df3f4d8cdbc2351a09c5" lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Custom Script</title>
+  <meta content="Custom Script" property="og:title">
+  <meta content="Custom Script" property="twitter:title">
+  <meta content="width=device-width, initial-scale=1" name="viewport">
+  <meta content="Webflow" name="generator">
+  <link href="../../css/normalize.css" rel="stylesheet" type="text/css">
+  <link href="../../css/webflow.css" rel="stylesheet" type="text/css">
+  <link href="../../css/vidkraftr.webflow.css" rel="stylesheet" type="text/css">
+  <link href="https://fonts.googleapis.com" rel="preconnect">
+  <link href="https://fonts.gstatic.com" rel="preconnect" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js" type="text/javascript"></script>
+  <script type="text/javascript">WebFont.load({  google: {    families: ["Boldonse:300,400,500,600,700","Inter Tight:300,400,500,600,700"]  }});</script>
+  <script type="text/javascript">!function(o,c){var n=c.documentElement,t=" w-mod-";n.className+=t+"js",("ontouchstart"in o||o.DocumentTouch&&c instanceof DocumentTouch)&&(n.className+=t+"touch")}(window,document);</script>
+  <link href="../../images/favicon.png" rel="shortcut icon" type="image/x-icon">
+  <link href="../../images/webclip.png" rel="apple-touch-icon"><!--  Keep this css code to improve the font quality -->
+  <style>
+  * {
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -o-font-smoothing: antialiased;
+}
+</style>
+  <!--  Kodl  -->
+  <script src="https://kodl-static.onrender.com/kodl.js" data-kodl-app="2cf98a63-843a-47c8-a6de-95bcb844dab0"></script>
+  <script async="" src="https://embed.wized.com/MqSvvmUa4nrrecQhXBIs.js"></script>
+  <script async="" type="module" data-wized-id="MqSvvmUa4nrrecQhXBIs" src="https://embed.wized.com/v2/index.js"></script>
+</head>
+<body>
+  <div class="page-wrapper">
+    <div class="global-styles">
+      <div class="style-overrides w-embed">
+        <style>
+/* Ensure all elements inherit the color from its parent */
+a,
+.w-input,
+.w-select,
+.w-tab-link,
+.w-nav-link,
+.w-nav-brand,
+.w-dropdown-btn,
+.w-dropdown-toggle,
+.w-slider-arrow-left,
+.w-slider-arrow-right,
+.w-dropdown-link {
+  color: inherit;
+  text-decoration: inherit;
+  font-size: inherit;
+}
+/* Focus state style for keyboard navigation for the focusable elements */
+*[tabindex]:focus-visible,
+  input[type="file"]:focus-visible {
+   outline: 0.125rem solid #4d65ff;
+   outline-offset: 0.125rem;
+}
+/* Get rid of top margin on first element in any rich text element */
+.w-richtext > :not(div):first-child, .w-richtext > div:first-child > :first-child {
+  margin-top: 0 !important;
+}
+/* Get rid of bottom margin on last element in any rich text element */
+.w-richtext>:last-child, .w-richtext ol li:last-child, .w-richtext ul li:last-child {
+	margin-bottom: 0 !important;
+}
+/* Prevent all click and hover interaction with an element */
+.pointer-events-off {
+	pointer-events: none;
+}
+/* Enables all click and hover interaction with an element */
+.pointer-events-on {
+  pointer-events: auto;
+}
+/* Create a class of .div-square which maintains a 1:1 dimension of a div */
+.div-square::after {
+	content: "";
+	display: block;
+	padding-bottom: 100%;
+}
+/* Make sure containers never lose their center alignment */
+.container-medium,.container-small, .container-large {
+	margin-right: auto !important;
+  margin-left: auto !important;
+}
+/* Apply "..." after 3 lines of text */
+.text-style-3lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;
+}
+/* Apply "..." after 2 lines of text */
+.text-style-2lines {
+	display: -webkit-box;
+	overflow: hidden;
+	-webkit-line-clamp: 2;
+	-webkit-box-orient: vertical;
+}
+/* Adds inline flex display */
+.display-inlineflex {
+  display: inline-flex;
+}
+/* These classes are never overwritten */
+.hide {
+  display: none !important;
+}
+/* Remove default Webflow chevron from form select */
+select{
+  -webkit-appearance:none;
+}
+@media screen and (max-width: 991px) {
+    .hide, .hide-tablet {
+        display: none !important;
+    }
+}
+  @media screen and (max-width: 767px) {
+    .hide-mobile-landscape{
+      display: none !important;
+    }
+}
+  @media screen and (max-width: 479px) {
+    .hide-mobile{
+      display: none !important;
+    }
+}
+.margin-0 {
+  margin: 0rem !important;
+}
+.padding-0 {
+  padding: 0rem !important;
+}
+.spacing-clean {
+padding: 0rem !important;
+margin: 0rem !important;
+}
+.margin-top {
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-top {
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-right {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-right {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-bottom {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-bottom {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+.margin-left {
+  margin-top: 0rem !important;
+  margin-right: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-left {
+  padding-top: 0rem !important;
+  padding-right: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-horizontal {
+  margin-top: 0rem !important;
+  margin-bottom: 0rem !important;
+}
+.padding-horizontal {
+  padding-top: 0rem !important;
+  padding-bottom: 0rem !important;
+}
+.margin-vertical {
+  margin-right: 0rem !important;
+  margin-left: 0rem !important;
+}
+.padding-vertical {
+  padding-right: 0rem !important;
+  padding-left: 0rem !important;
+}
+/* Apply "..." at 100% width */
+.truncate-width { 
+		width: 100%; 
+    white-space: nowrap; 
+    overflow: hidden; 
+    text-overflow: ellipsis; 
+}
+/* Removes native scrollbar */
+.no-scrollbar {
+    -ms-overflow-style: none;
+    overflow: -moz-scrollbars-none; 
+}
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+/* Styles généraux */
+.creator_component {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: var(--color-scheme-1--background);
+  color: var(--color-scheme-1--text);
+  padding: 2rem;
+  border-radius: 0.5rem;
+}
+.creator_heading {
+  font-family: 'Instrument Serif', serif;
+  font-weight: 400;
+  margin-bottom: 0.5rem;
+}
+.creator_description {
+  font-family: 'Inter Tight', sans-serif;
+  font-weight: 400;
+  margin-bottom: 1.5rem;
+  opacity: 0.8;
+}
+/* Étapes */
+.creator_steps-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 1rem;
+}
+.creator_step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  opacity: 0.5;
+}
+.creator_step.is-active {
+  opacity: 1;
+}
+.creator_step-number {
+  width: 2rem;
+  height: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-scheme-1--foreground);
+  color: var(--color-scheme-1--text);
+  border-radius: 50%;
+  font-weight: 500;
+}
+.creator_step.is-active .creator_step-number {
+  background-color: var(--color-scheme-1--accent);
+}
+.creator_step-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+}
+/* Sections */
+.creator_section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+/* Formulaires */
+.creator_input-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+.creator_label {
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+.creator_input, .creator_textarea, .creator_select {
+  padding: 0.75rem;
+  border: 1px solid var(--color-scheme-1--border);
+  border-radius: 0.25rem;
+  background-color: var(--color-scheme-1--foreground);
+  color: var(--color-scheme-1--text);
+  font-family: 'Inter Tight', sans-serif;
+}
+.creator_textarea {
+  min-height: 150px;
+  resize: vertical;
+}
+.creator_character-count {
+  font-size: 0.75rem;
+  text-align: right;
+  opacity: 0.7;
+}
+/* Templates */
+.creator_templates-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.creator_template-item {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid var(--color-scheme-1--border);
+  border-radius: 0.5rem;
+  overflow: hidden;
+  transition: all 0.2s ease;
+}
+.creator_template-item.is-selected {
+  border-color: var(--color-scheme-1--accent);
+  box-shadow: 0 0 0 2px var(--color-scheme-1--accent);
+}
+.creator_template-preview {
+  aspect-ratio: 16/9;
+  background-color: var(--color-scheme-1--foreground);
+  background-size: cover;
+  background-position: center;
+}
+.creator_template-info {
+  padding: 1rem;
+}
+.creator_template-name {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.25rem;
+}
+.creator_template-meta {
+  display: flex;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+}
+.creator_template-category {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--color-scheme-1--foreground);
+  border-radius: 1rem;
+}
+.creator_template-premium {
+  padding: 0.25rem 0.5rem;
+  background-color: var(--color-scheme-1--accent);
+  border-radius: 1rem;
+}
+.creator_template-item .button {
+  margin-top: auto;
+  margin: 0 1rem 1rem 1rem;
+}
+/* Options */
+.creator_options-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.creator_option-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+/* Résumé */
+.creator_summary {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+  padding: 1.5rem;
+  background-color: var(--color-scheme-1--foreground);
+  border-radius: 0.5rem;
+}
+.creator_summary-heading {
+  font-size: 1rem;
+  font-weight: 500;
+  margin-bottom: 0.5rem;
+}
+.creator_summary-text {
+  font-size: 0.875rem;
+  line-height: 1.5;
+}
+.creator_summary-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  font-size: 0.875rem;
+}
+.creator_summary-list-item {
+  margin-bottom: 0.25rem;
+}
+.creator_credits {
+  grid-column: 1 / -1;
+  margin-top: 1rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--color-scheme-1--border);
+}
+/* Génération */
+.creator_generation {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+.creator_progress {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+.creator_progress-bar {
+  width: 100%;
+  height: 0.5rem;
+  background-color: var(--color-scheme-1--foreground);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+.creator_progress-fill {
+  height: 100%;
+  background-color: var(--color-scheme-1--accent);
+  width: 0%;
+  transition: width 0.3s ease;
+}
+.creator_progress-status {
+  text-align: center;
+  font-size: 0.875rem;
+}
+.creator_video {
+  width: 100%;
+  max-width: 640px;
+  border-radius: 0.5rem;
+  overflow: hidden;
+}
+.creator_actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+}
+/* Navigation */
+.creator_navigation {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1.5rem;
+}
+</style>
+      </div>
+      <div class="fonts w-embed">
+        <style>@import url('https://fonts.googleapis.com/css?family=Instrument%20Serif:400')</style>
+        <style>@import url('https://fonts.googleapis.com/css?family=Inter%20Tight:400,500')</style>
+      </div>
+      <div class="color-schemes w-embed">
+        <style>
+.color-scheme-1 {}
+  .color-scheme-2 {
+    --color-scheme-1--text: var(--color-scheme-2--text);
+    --color-scheme-1--background: var(--color-scheme-2--background);
+    --color-scheme-1--foreground: var(--color-scheme-2--foreground);
+    --color-scheme-1--border: var(--color-scheme-2--border);
+    --color-scheme-1--accent: var(--color-scheme-2--accent);
+  }
+  .color-scheme-3 {
+    --color-scheme-1--text: var(--color-scheme-3--text);
+    --color-scheme-1--background: var(--color-scheme-3--background);
+    --color-scheme-1--foreground: var(--color-scheme-3--foreground);
+    --color-scheme-1--border: var(--color-scheme-3--border);
+    --color-scheme-1--accent: var(--color-scheme-3--accent);
+  }
+  .color-scheme-4 {
+    --color-scheme-1--text: var(--color-scheme-4--text);
+    --color-scheme-1--background: var(--color-scheme-4--background);
+    --color-scheme-1--foreground: var(--color-scheme-4--foreground);
+    --color-scheme-1--border: var(--color-scheme-4--border);
+    --color-scheme-1--accent: var(--color-scheme-4--accent);
+  }
+  .color-scheme-5 {
+    --color-scheme-1--text: var(--color-scheme-5--text);
+    --color-scheme-1--background: var(--color-scheme-5--background);
+    --color-scheme-1--foreground: var(--color-scheme-5--foreground);
+    --color-scheme-1--border: var(--color-scheme-5--border);
+    --color-scheme-1--accent: var(--color-scheme-5--accent);
+  }
+.w-slider-dot {
+  background-color: var(--color-scheme-1--text);
+  opacity: 0.20;
+}
+.w-slider-dot.w-active {
+  background-color: var(--color-scheme-1--text);
+  opacity: 1;
+}
+/* Override .w-slider-nav-invert styles */
+.w-slider-nav-invert .w-slider-dot {
+  background-color: var(--color-scheme-1--text) !important;
+  opacity: 0.20 !important;
+}
+.w-slider-nav-invert .w-slider-dot.w-active {
+  background-color: var(--color-scheme-1--text) !important;
+  opacity: 1 !important;
+}
+</style>
+      </div>
+    </div>
+    <main class="shell8_wrapper">
+      <div data-animation="over-left" class="sidebar1_component w-nav" data-easing2="ease" fs-scrolldisable-element="smart-nav" data-easing="ease" data-collapse="medium" data-w-id="dd30bbe3-7f5a-2532-c76b-5f468be2248a" role="banner" data-duration="400">
+        <div class="sidebar1_container">
+          <a href="../../index.html" class="sidebar1_logo-link w-inline-block"><img src="../../images/Logo--Text.svg" loading="lazy" width="110" alt="" class="sidebar1_logo"></a>
+          <nav role="navigation" class="sidebar1_menu w-nav-menu">
+            <div class="sidebar1_menu-wrapper">
+              <div class="sidebar1_logo-wrapper-tablet">
+                <a href="#" class="sidebar1_logo-link-tablet w-inline-block"><img src="../../images/Full-Orange.svg" loading="lazy" width="110" alt="" class="sidebar1_logo"></a>
+                <div class="sidebar1_close-mobile">
+                  <div class="sidebar1_menu-button w-nav-button">
+                    <div class="icon-embed-small w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M17.1266 16.773L16.7729 17.1266C16.5777 17.3218 16.2611 17.3218 16.0658 17.1266L12 13.0607L7.9341 17.1265C7.73888 17.3218 7.42229 17.3218 7.22702 17.1265L6.87347 16.773C6.6782 16.5777 6.6782 16.2612 6.87347 16.0659L10.9394 12L6.87347 7.93413C6.6782 7.73891 6.6782 7.42232 6.87347 7.22705L7.22702 6.8735C7.42228 6.67824 7.73888 6.67824 7.9341 6.8735L12 10.9394L16.0658 6.8735C16.2611 6.67824 16.5777 6.67824 16.7729 6.8735L17.1266 7.22705C17.3218 7.42231 17.3218 7.73891 17.1266 7.93413L13.0607 12L17.1266 16.0659C17.3218 16.2612 17.3218 16.5777 17.1266 16.773Z" fill="currentColor"></path>
+                      </svg></div>
+                  </div>
+                </div>
+              </div>
+              <div class="sidebar1_menu-top">
+                <a href="../../app/dashboard.html" class="sidebar1_link w-inline-block">
+                  <div class="sidebar1_link-wrapper">
+                    <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M2.99979 13H3.99979V20C3.99979 21.103 4.89679 22 5.99979 22H17.9998C19.1028 22 19.9998 21.103 19.9998 20V13H20.9998C21.1975 12.9999 21.3908 12.9412 21.5552 12.8314C21.7197 12.7215 21.8478 12.5653 21.9235 12.3826C21.9991 12.1999 22.0189 11.9989 21.9804 11.8049C21.9418 11.611 21.8466 11.4328 21.7068 11.293L12.7068 2.29296C12.614 2.20001 12.5038 2.12627 12.3825 2.07596C12.2612 2.02565 12.1311 1.99976 11.9998 1.99976C11.8685 1.99976 11.7384 2.02565 11.6171 2.07596C11.4958 2.12627 11.3856 2.20001 11.2928 2.29296L2.29279 11.293C2.15298 11.4328 2.05777 11.611 2.0192 11.8049C1.98064 11.9989 2.00044 12.1999 2.07611 12.3826C2.15178 12.5653 2.27992 12.7215 2.44433 12.8314C2.60874 12.9412 2.80204 12.9999 2.99979 13ZM9.99979 20V15H13.9998V20H9.99979ZM11.9998 4.41396L17.9998 10.414L18.0008 20H15.9998V15C15.9998 13.897 15.1028 13 13.9998 13H9.99979C8.89679 13 7.99979 13.897 7.99979 15V20H5.99979V10.414L11.9998 4.41396Z" fill="currentColor"></path>
+                      </svg></div>
+                    <div>Overview</div>
+                  </div>
+                </a>
+                <a href="../../app/library.html" class="sidebar1_link w-inline-block">
+                  <div class="sidebar1_link-wrapper">
+                    <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.51603 14.823L5.02603 21.275C4.97989 21.4704 4.99374 21.6751 5.06577 21.8625C5.1378 22.0499 5.26467 22.2112 5.4298 22.3253C5.59492 22.4395 5.79064 22.5012 5.99138 22.5024C6.19212 22.5036 6.38855 22.4442 6.55503 22.332L12 18.702L17.445 22.332C17.6154 22.4451 17.8162 22.5033 18.0207 22.4988C18.2251 22.4944 18.4232 22.4274 18.5884 22.3069C18.7536 22.1865 18.878 22.0183 18.9448 21.8251C19.0116 21.6318 19.0176 21.4228 18.962 21.226L17.133 14.826L21.669 10.744C21.8143 10.6132 21.9181 10.4427 21.9674 10.2535C22.0168 10.0644 22.0097 9.86488 21.9469 9.67974C21.8841 9.49461 21.7685 9.33193 21.6142 9.21183C21.46 9.09173 21.2739 9.01947 21.079 9.004L15.378 8.55L12.911 3.089C12.8324 2.91316 12.7045 2.76384 12.5428 2.65906C12.3812 2.55429 12.1927 2.49854 12 2.49854C11.8074 2.49854 11.6189 2.55429 11.4572 2.65906C11.2956 2.76384 11.1677 2.91316 11.089 3.089L8.62203 8.55L2.92103 9.003C2.72948 9.01818 2.54636 9.08821 2.39358 9.20473C2.2408 9.32125 2.12482 9.47932 2.05952 9.66003C1.99422 9.84074 1.98236 10.0364 2.02537 10.2237C2.06838 10.411 2.16443 10.5819 2.30203 10.716L6.51603 14.823ZM9.36903 10.497C9.54752 10.4829 9.71895 10.4211 9.86533 10.318C10.0117 10.2149 10.1277 10.0743 10.201 9.911L12 5.93L13.799 9.911C13.8724 10.0743 13.9883 10.2149 14.1347 10.318C14.2811 10.4211 14.4525 10.4829 14.631 10.497L18.603 10.812L15.332 13.756C15.048 14.012 14.935 14.406 15.039 14.774L16.292 19.159L12.556 16.668C12.392 16.5579 12.199 16.4992 12.0015 16.4992C11.804 16.4992 11.611 16.5579 11.447 16.668L7.54303 19.271L8.59303 14.725C8.63153 14.5578 8.62636 14.3835 8.57802 14.2189C8.52969 14.0543 8.43981 13.9048 8.31703 13.785L5.27903 10.823L9.36903 10.497Z" fill="currentColor"></path>
+                      </svg></div>
+                    <div>Video Library</div>
+                  </div>
+                  <div class="sidebar1_badge">
+                    <div class="text-size-small">24</div>
+                  </div>
+                </a>
+                <a href="../../app/create.html" class="sidebar1_link w-inline-block">
+                  <div class="sidebar1_link-wrapper">
+                    <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 25" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M6.51603 14.823L5.02603 21.275C4.97989 21.4704 4.99374 21.6751 5.06577 21.8625C5.1378 22.0499 5.26467 22.2112 5.4298 22.3253C5.59492 22.4395 5.79064 22.5012 5.99138 22.5024C6.19212 22.5036 6.38855 22.4442 6.55503 22.332L12 18.702L17.445 22.332C17.6154 22.4451 17.8162 22.5033 18.0207 22.4988C18.2251 22.4944 18.4232 22.4274 18.5884 22.3069C18.7536 22.1865 18.878 22.0183 18.9448 21.8251C19.0116 21.6318 19.0176 21.4228 18.962 21.226L17.133 14.826L21.669 10.744C21.8143 10.6132 21.9181 10.4427 21.9674 10.2535C22.0168 10.0644 22.0097 9.86488 21.9469 9.67974C21.8841 9.49461 21.7685 9.33193 21.6142 9.21183C21.46 9.09173 21.2739 9.01947 21.079 9.004L15.378 8.55L12.911 3.089C12.8324 2.91316 12.7045 2.76384 12.5428 2.65906C12.3812 2.55429 12.1927 2.49854 12 2.49854C11.8074 2.49854 11.6189 2.55429 11.4572 2.65906C11.2956 2.76384 11.1677 2.91316 11.089 3.089L8.62203 8.55L2.92103 9.003C2.72948 9.01818 2.54636 9.08821 2.39358 9.20473C2.2408 9.32125 2.12482 9.47932 2.05952 9.66003C1.99422 9.84074 1.98236 10.0364 2.02537 10.2237C2.06838 10.411 2.16443 10.5819 2.30203 10.716L6.51603 14.823ZM9.36903 10.497C9.54752 10.4829 9.71895 10.4211 9.86533 10.318C10.0117 10.2149 10.1277 10.0743 10.201 9.911L12 5.93L13.799 9.911C13.8724 10.0743 13.9883 10.2149 14.1347 10.318C14.2811 10.4211 14.4525 10.4829 14.631 10.497L18.603 10.812L15.332 13.756C15.048 14.012 14.935 14.406 15.039 14.774L16.292 19.159L12.556 16.668C12.392 16.5579 12.199 16.4992 12.0015 16.4992C11.804 16.4992 11.611 16.5579 11.447 16.668L7.54303 19.271L8.59303 14.725C8.63153 14.5578 8.62636 14.3835 8.57802 14.2189C8.52969 14.0543 8.43981 13.9048 8.31703 13.785L5.27903 10.823L9.36903 10.497Z" fill="currentColor"></path>
+                      </svg></div>
+                    <div>Create New Video</div>
+                  </div>
+                </a>
+                <a href="../../app/processing.html" class="sidebar1_link w-inline-block">
+                  <div class="sidebar1_link-wrapper">
+                    <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M22.0001 7.99899C21.9999 7.82052 21.9519 7.64535 21.8612 7.49166C21.7705 7.33798 21.6402 7.21137 21.4841 7.12499L12.4621 2.12499C12.3138 2.04332 12.1473 2.00049 11.9781 2.00049C11.8088 2.00049 11.6423 2.04332 11.4941 2.12499L2.51607 7.08499C2.3601 7.17136 2.23006 7.29785 2.13941 7.45136C2.04876 7.60487 2.0008 7.77983 2.00049 7.95811C2.00018 8.13639 2.04754 8.31151 2.13767 8.46534C2.22779 8.61916 2.3574 8.7461 2.51307 8.83299L11.5351 13.873C11.6836 13.9564 11.8511 14.0004 12.0214 14.0005C12.1918 14.0007 12.3594 13.9571 12.5081 13.874L21.4861 8.87399C21.642 8.78727 21.7719 8.6604 21.8623 8.50654C21.9527 8.35268 22.0002 8.17744 22.0001 7.99899ZM12.0231 11.854L5.06007 7.96499L11.9771 4.14299L18.9411 8.00199L12.0231 11.854Z" fill="currentColor"></path>
+                        <path d="M20.515 11.126L12 15.856L3.48504 11.126L2.51404 12.874L11.514 17.874C11.6626 17.9565 11.8296 17.9997 11.9995 17.9997C12.1694 17.9997 12.3365 17.9565 12.485 17.874L21.485 12.874L20.515 11.126Z" fill="currentColor"></path>
+                        <path d="M20.515 15.126L12 19.856L3.48504 15.126L2.51404 16.874L11.514 21.874C11.6626 21.9565 11.8296 21.9997 11.9995 21.9997C12.1694 21.9997 12.3365 21.9565 12.485 21.874L21.485 16.874L20.515 15.126Z" fill="currentColor"></path>
+                      </svg></div>
+                    <div>Projects</div>
+                  </div>
+                </a>
+                <a href="#" class="sidebar1_link w-inline-block">
+                  <div class="sidebar1_link-wrapper">
+                    <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M19.903 8.586C19.8556 8.47747 19.7892 8.37825 19.707 8.293L13.707 2.293C13.6217 2.21078 13.5225 2.14441 13.414 2.097C13.384 2.083 13.352 2.075 13.32 2.064C13.2363 2.03553 13.1492 2.01837 13.061 2.013C13.04 2.011 13.021 2 13 2H6C4.897 2 4 2.897 4 4V20C4 21.103 4.897 22 6 22H18C19.103 22 20 21.103 20 20V9C20 8.979 19.989 8.96 19.987 8.938C19.9821 8.84972 19.9649 8.76255 19.936 8.679C19.926 8.647 19.917 8.616 19.903 8.586ZM16.586 8H14V5.414L16.586 8ZM6 20V4H12V9C12 9.26522 12.1054 9.51957 12.2929 9.70711C12.4804 9.89464 12.7348 10 13 10H18L18.002 20H6Z" fill="currentColor"></path>
+                        <path d="M8 12H16V14H8V12ZM8 16H16V18H8V16ZM8 8H10V10H8V8Z" fill="currentColor"></path>
+                      </svg></div>
+                    <div>Templates</div>
+                  </div>
+                </a>
+              </div>
+              <div class="sidebar1_menu-bottom">
+                <div class="line-divider"></div>
+                <div class="sidebar1_link-list">
+                  <a href="#" class="sidebar1_link w-inline-block">
+                    <div class="sidebar1_link-wrapper">
+                      <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 6C10.957 6.00132 9.95716 6.41622 9.21968 7.1537C8.4822 7.89118 8.0673 8.89104 8.06598 9.934H10.066C10.066 8.867 10.934 8 12 8C13.066 8 13.934 8.867 13.934 9.934C13.934 10.532 13.453 10.966 12.718 11.56C12.4779 11.7481 12.2472 11.948 12.027 12.159C11.029 13.156 11 14.215 11 14.333V15H13L12.999 14.367C13 14.351 13.032 13.981 13.44 13.574C13.59 13.424 13.779 13.274 13.975 13.116C14.754 12.485 15.933 11.532 15.933 9.934C15.9322 8.89106 15.5176 7.89104 14.7802 7.15347C14.0428 6.4159 13.0429 6.00106 12 6ZM11 16H13V18H11V16Z" fill="currentColor"></path>
+                          <path d="M12 2C6.486 2 2 6.486 2 12C2 17.514 6.486 22 12 22C17.514 22 22 17.514 22 12C22 6.486 17.514 2 12 2ZM12 20C7.589 20 4 16.411 4 12C4 7.589 7.589 4 12 4C16.411 4 20 7.589 20 12C20 16.411 16.411 20 12 20Z" fill="currentColor"></path>
+                        </svg></div>
+                      <div>Help Center</div>
+                    </div>
+                  </a>
+                  <a href="#" class="sidebar1_link w-inline-block">
+                    <div class="sidebar1_link-wrapper">
+                      <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                          <path d="M12 16C14.206 16 16 14.206 16 12C16 9.794 14.206 8 12 8C9.794 8 8 9.794 8 12C8 14.206 9.794 16 12 16ZM12 10C13.084 10 14 10.916 14 12C14 13.084 13.084 14 12 14C10.916 14 10 13.084 10 12C10 10.916 10.916 10 12 10Z" fill="currentColor"></path>
+                          <path d="M2.84498 16.136L3.84498 17.866C4.37598 18.783 5.65398 19.127 6.57498 18.596L7.10398 18.29C7.68252 18.7451 8.32039 19.1192 8.99998 19.402V20C8.99998 21.103 9.89698 22 11 22H13C14.103 22 15 21.103 15 20V19.402C15.6793 19.1192 16.3172 18.7454 16.896 18.291L17.425 18.597C18.348 19.127 19.623 18.785 20.156 17.866L21.155 16.137C21.42 15.6777 21.4919 15.132 21.3548 14.6197C21.2177 14.1075 20.8829 13.6706 20.424 13.405L19.919 13.113C20.0263 12.3756 20.0263 11.6264 19.919 10.889L20.424 10.597C20.8827 10.3312 21.2174 9.89433 21.3544 9.38216C21.4914 8.86998 21.4197 8.32436 21.155 7.865L20.156 6.136C19.625 5.216 18.348 4.871 17.425 5.404L16.896 5.71C16.3174 5.25491 15.6796 4.8808 15 4.598V4C15 2.897 14.103 2 13 2H11C9.89698 2 8.99998 2.897 8.99998 4V4.598C8.32062 4.88084 7.6828 5.25459 7.10398 5.709L6.57498 5.403C5.65098 4.872 4.37498 5.216 3.84398 6.135L2.84498 7.864C2.57996 8.3233 2.50809 8.86901 2.64515 9.38126C2.78222 9.89352 3.117 10.3304 3.57598 10.596L4.08098 10.888C3.97321 11.6251 3.97321 12.3739 4.08098 13.111L3.57598 13.403C3.11714 13.669 2.78251 14.106 2.64547 14.6184C2.50843 15.1307 2.58018 15.6765 2.84498 16.136ZM6.17098 13.378C6.05806 12.9273 6.00064 12.4646 5.99998 12C5.99998 11.538 6.05798 11.074 6.16998 10.622C6.22272 10.4113 6.20537 10.1892 6.12056 9.98928C6.03576 9.78935 5.88811 9.6225 5.69998 9.514L4.57698 8.864L5.57498 7.135L6.71998 7.797C6.9067 7.90505 7.12344 7.94962 7.33765 7.92401C7.55185 7.89841 7.75198 7.80401 7.90798 7.655C8.5845 7.01156 9.40031 6.53281 10.292 6.256C10.4968 6.19347 10.6761 6.06683 10.8036 5.89473C10.931 5.72263 10.9999 5.51416 11 5.3V4H13V5.3C13.0001 5.51416 13.0689 5.72263 13.1964 5.89473C13.3238 6.06683 13.5032 6.19347 13.708 6.256C14.5995 6.53321 15.4152 7.0119 16.092 7.655C16.2481 7.80372 16.4482 7.89792 16.6624 7.92352C16.8765 7.94911 17.0932 7.90473 17.28 7.797L18.424 7.136L19.424 8.865L18.3 9.514C18.112 9.62262 17.9644 9.78948 17.8796 9.98938C17.7948 10.1893 17.7774 10.4113 17.83 10.622C17.942 11.074 18 11.538 18 12C18 12.461 17.942 12.925 17.829 13.378C17.7765 13.5888 17.7941 13.8109 17.8791 14.0108C17.964 14.2107 18.1118 14.3775 18.3 14.486L19.423 15.135L18.425 16.864L17.28 16.203C17.0933 16.0948 16.8765 16.0501 16.6623 16.0757C16.448 16.1013 16.2479 16.1958 16.092 16.345C15.4155 16.9884 14.5996 17.4672 13.708 17.744C13.5032 17.8065 13.3238 17.9332 13.1964 18.1053C13.0689 18.2774 13.0001 18.4858 13 18.7L13.002 20H11V18.7C10.9999 18.4858 10.931 18.2774 10.8036 18.1053C10.6761 17.9332 10.4968 17.8065 10.292 17.744C9.40048 17.4668 8.58476 16.9881 7.90798 16.345C7.75228 16.1954 7.55203 16.1007 7.33763 16.0753C7.12322 16.0498 6.90636 16.095 6.71998 16.204L5.57598 16.866L4.57598 15.137L5.69998 14.486C5.88817 14.3775 6.03593 14.2107 6.12091 14.0108C6.20588 13.8109 6.22346 13.5888 6.17098 13.378Z" fill="currentColor"></path>
+                        </svg></div>
+                      <div>Settings</div>
+                    </div>
+                  </a>
+                </div>
+                <div class="line-divider"></div>
+                <div class="sidebar1_account">
+                  <div class="sidebar1_avatar">
+                    <div id="w-node-dd30bbe3-7f5a-2532-c76b-5f468be224d1-8be2248a" class="sidebar1_avatar-text-wrapper">
+                      <div class="sidebar_name-holder">
+                        <div kodl-user="firstname" class="text-size-small text-weight-medium">John</div>
+                        <div kodl-user="lastname" class="text-size-small text-weight-medium">Binks</div>
+                      </div>
+                      <div kodl-user="email" class="text-size-small">hello@relume.io</div>
+                    </div>
+                  </div>
+                  <div data-hover="false" data-delay="200" data-w-id="dd30bbe3-7f5a-2532-c76b-5f468be224d6" class="sidebar1_dropdown w-dropdown">
+                    <div class="sidebar1_dropdown-toggle w-dropdown-toggle">
+                      <div class="button is-tertiary is-small">
+                        <div class="icon-embed-xsmall w-embed"><svg width="100%" height="100%" viewbox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 10C10.9 10 10 10.9 10 12C10 13.1 10.9 14 12 14C13.1 14 14 13.1 14 12C14 10.9 13.1 10 12 10ZM18 10C16.9 10 16 10.9 16 12C16 13.1 16.9 14 18 14C19.1 14 20 13.1 20 12C20 10.9 19.1 10 18 10ZM6 10C4.9 10 4 10.9 4 12C4 13.1 4.9 14 6 14C7.1 14 8 13.1 8 12C8 10.9 7.1 10 6 10Z" fill="currentColor"></path>
+                          </svg></div>
+                      </div>
+                    </div>
+                    <nav class="sidebar1_dropdown-list w-dropdown-list">
+                      <a href="#" class="sidebar1_dropdown-link w-dropdown-link">My Profile</a>
+                      <a href="#" class="sidebar1_dropdown-link w-dropdown-link">Profile Settings</a>
+                      <div class="sidebar1_dropdown-divider"></div>
+                      <a href="#" kodl-action="logout" class="sidebar1_dropdown-link w-dropdown-link">Log Out</a>
+                    </nav>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <div class="sidebar1_menu-button w-nav-button">
+            <div class="menu-icon">
+              <div class="menu-icon_line-top"></div>
+              <div class="menu-icon_line-middle">
+                <div class="menu-icon_line-middle-inner"></div>
+              </div>
+              <div class="menu-icon_line-bottom"></div>
+            </div>
+          </div>
+        </div>
+        <div class="sidebar1_background-layer"></div>
+      </div>
+      <main class="shell8_main-wrapper">
+        <div class="w-embed">
+          <!DOCTYPE html>
+          <html lang="en">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Custom Script - VidKraftr</title>
+            <style>
+        /* Custom Script Page Styles */
+        .custom-script_component {
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem;
+            background-color: var(--color-scheme-1--background);
+            color: var(--color-scheme-1--text);
+            min-height: 100vh;
+        }
+        .custom-script_header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 1rem;
+            margin-bottom: 1rem;
+        }
+        .custom-script_title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 2.5rem;
+            font-weight: 400;
+            margin: 0;
+        }
+        .custom-script_breadcrumb {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-size: 0.875rem;
+            opacity: 0.7;
+        }
+        .custom-script_breadcrumb a {
+            color: var(--color-scheme-1--accent);
+            text-decoration: none;
+        }
+        .custom-script_breadcrumb a:hover {
+            text-decoration: underline;
+        }
+        /* Steps Navigation */
+        .custom-script_steps-wrapper {
+            display: flex;
+            justify-content: center;
+            margin-bottom: 2rem;
+            padding: 1rem;
+            background-color: var(--color-scheme-1--foreground);
+            border-radius: 0.75rem;
+        }
+        .custom-script_steps {
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+        .custom-script_step {
+            display: flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.75rem 1rem;
+            border-radius: 0.5rem;
+            transition: all 0.2s ease;
+        }
+        .custom-script_step.is-active {
+            background-color: var(--color-scheme-1--accent);
+            color: white;
+        }
+        .custom-script_step.is-completed {
+            opacity: 0.6;
+        }
+        .custom-script_step-number {
+            width: 1.5rem;
+            height: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: rgba(255, 255, 255, 0.2);
+            border-radius: 50%;
+            font-size: 0.75rem;
+            font-weight: 600;
+        }
+        .custom-script_step.is-active .custom-script_step-number {
+            background-color: rgba(255, 255, 255, 0.3);
+        }
+        .custom-script_step-label {
+            font-size: 0.875rem;
+            font-weight: 500;
+        }
+        .custom-script_step-divider {
+            width: 2rem;
+            height: 1px;
+            background-color: var(--color-scheme-1--border);
+        }
+        /* Main Content - Bento Grid Layout */
+        .custom-script_main {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto 1fr;
+            gap: 1.5rem;
+            height: calc(100vh - 300px);
+            min-height: 600px;
+        }
+        .custom-script_analysis-section {
+            grid-column: 1 / -1;
+            background-color: var(--color-scheme-1--foreground);
+            border: 1px solid var(--color-scheme-1--border);
+            border-radius: 1rem;
+            padding: 1.5rem;
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 2rem;
+            align-items: center;
+        }
+        .custom-script_form-section {
+            background-color: var(--color-scheme-1--foreground);
+            border: 1px solid var(--color-scheme-1--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            overflow-y: auto;
+            height: 100%;
+        }
+        .custom-script_tips-section {
+            background-color: var(--color-scheme-1--foreground);
+            border: 1px solid var(--color-scheme-1--border);
+            border-radius: 1rem;
+            padding: 2rem;
+            overflow-y: auto;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+        }
+        .custom-script_form-header {
+            margin-bottom: 2rem;
+        }
+        .custom-script_form-title {
+            font-family: 'Instrument Serif', serif;
+            font-size: 1.75rem;
+            font-weight: 400;
+            margin-bottom: 0.5rem;
+        }
+        .custom-script_form-subtitle {
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+        /* Form Fields */
+        .custom-script_field {
+            margin-bottom: 1.5rem;
+        }
+        .custom-script_label {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            font-weight: 500;
+            margin-bottom: 0.5rem;
+            font-size: 0.875rem;
+        }
+        .custom-script_label-required {
+            color: var(--color-scheme-1--accent);
+            font-size: 0.75rem;
+        }
+        .custom-script_textarea {
+            width: 100%;
+            min-height: 200px;
+            padding: 1rem;
+            border: 1px solid var(--color-scheme-1--border);
+            border-radius: 0.5rem;
+            background-color: var(--color-scheme-1--background);
+            color: var(--color-scheme-1--text);
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 0.875rem;
+            line-height: 1.5;
+            resize: vertical;
+            transition: all 0.2s ease;
+        }
+        .custom-script_textarea:focus {
+            outline: none;
+            border-color: var(--color-scheme-1--accent);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+        .custom-script_textarea::placeholder {
+            opacity: 0.5;
+        }
+        .custom-script_field-meta {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 0.5rem;
+            font-size: 0.75rem;
+            opacity: 0.7;
+        }
+        .custom-script_char-count {
+            display: flex;
+            gap: 0.5rem;
+        }
+        .custom-script_char-count.is-warning {
+            color: #f59e0b;
+        }
+        .custom-script_char-count.is-danger {
+            color: #ef4444;
+        }
+        /* Select Fields */
+        .custom-script_select-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 1rem;
+            margin-bottom: 1.5rem;
+        }
+        .custom-script_select {
+            padding: 0.75rem;
+            border: 1px solid var(--color-scheme-1--border);
+            border-radius: 0.5rem;
+            background-color: var(--color-scheme-1--background);
+            color: var(--color-scheme-1--text);
+            font-family: 'Inter Tight', sans-serif;
+            font-size: 0.875rem;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+        .custom-script_select:focus {
+            outline: none;
+            border-color: var(--color-scheme-1--accent);
+            box-shadow: 0 0 0 3px rgba(79, 70, 229, 0.1);
+        }
+        /* Analysis Section - Top Bento Cards */
+        .custom-script_analysis-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            padding: 1rem;
+            background: linear-gradient(135deg, var(--color-scheme-1--background), rgba(79, 70, 229, 0.05));
+            border: 1px solid var(--color-scheme-1--border);
+            border-radius: 0.75rem;
+            transition: all 0.2s ease;
+        }
+        .custom-script_analysis-card:hover {
+            transform: translateY(-2px);
+            border-color: var(--color-scheme-1--accent);
+        }
+        .custom-script_analysis-value {
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 0.25rem;
+            color: var(--color-scheme-1--accent);
+        }
+        .custom-script_analysis-label {
+            font-size: 0.875rem;
+            opacity: 0.8;
+            font-weight: 500;
+        }
+        .custom-script_analysis-icon {
+            font-size: 1.5rem;
+            margin-bottom: 0.5rem;
+        }
+        .custom-script_tips-card {
+            background-color: var(--color-scheme-1--background);
+            border: 1px solid var(--color-scheme-1--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            flex: 1;
+        }
+        .custom-script_platform-card {
+            background-color: var(--color-scheme-1--background);
+            border: 1px solid var(--color-scheme-1--border);
+            border-radius: 0.75rem;
+            padding: 1.5rem;
+            flex: 1;
+        }
+        .custom-script_card-title {
+            font-weight: 600;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .custom-script_tips-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .custom-script_tips-item {
+            display: flex;
+            align-items: flex-start;
+            gap: 0.75rem;
+            margin-bottom: 1rem;
+            font-size: 0.875rem;
+            line-height: 1.4;
+        }
+        .custom-script_tips-item:last-child {
+            margin-bottom: 0;
+        }
+        .custom-script_tips-icon {
+            color: var(--color-scheme-1--accent);
+            font-weight: 600;
+            margin-top: 0.1rem;
+        }
+        /* Preview Section */
+        .custom-script_preview-content {
+            font-size: 0.875rem;
+            opacity: 0.8;
+            line-height: 1.5;
+        }
+        /* Navigation */
+        .custom-script_navigation {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 2rem;
+            padding-top: 2rem;
+            border-top: 1px solid var(--color-scheme-1--border);
+        }
+        .custom-script_nav-left {
+            display: flex;
+            gap: 1rem;
+        }
+        /* Responsive */
+        @media screen and (max-width: 1200px) {
+            .custom-script_analysis-section {
+                grid-template-columns: 1fr 1fr;
+                gap: 1rem;
+            }
+            .custom-script_analysis-section .custom-script_analysis-card:last-child {
+                grid-column: 1 / -1;
+                max-width: 300px;
+                margin: 0 auto;
+            }
+        }
+        @media screen and (max-width: 991px) {
+            .custom-script_main {
+                grid-template-columns: 1fr;
+                grid-template-rows: auto auto auto;
+                height: auto;
+                gap: 1.5rem;
+            }
+            .custom-script_analysis-section {
+                grid-column: 1;
+                grid-template-columns: repeat(3, 1fr);
+            }
+            .custom-script_form-section,
+            .custom-script_tips-section {
+                height: auto;
+                max-height: none;
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .custom-script_component {
+                padding: 1rem;
+                gap: 1.5rem;
+            }
+            .custom-script_title {
+                font-size: 2rem;
+            }
+            .custom-script_steps {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .custom-script_step-divider {
+                width: 1px;
+                height: 1.5rem;
+            }
+            .custom-script_select-grid {
+                grid-template-columns: 1fr;
+            }
+            .custom-script_navigation {
+                flex-direction: column;
+                gap: 1rem;
+            }
+            .custom-script_nav-left {
+                flex-direction: column;
+                width: 100%;
+            }
+            .custom-script_analysis-section {
+                grid-template-columns: 1fr;
+                gap: 1rem;
+            }
+            .custom-script_main {
+                gap: 1rem;
+            }
+            .custom-script_form-section,
+            .custom-script_tips-card,
+            .custom-script_platform-card {
+                padding: 1rem;
+            }
+        }
+        @media screen and (max-width: 479px) {
+            .custom-script_component {
+                padding: 0.75rem;
+            }
+            .custom-script_form-section,
+            .custom-script_tips-card,
+            .custom-script_preview-card {
+                padding: 1rem;
+            }
+        }
+    </style>
+          </head>
+          <body>
+            <div class="custom-script_component">
+              <!--  Header  -->
+              <div class="custom-script_header">
+                <div>
+                  <div class="custom-script_breadcrumb">
+                    <a href="../../app/dashboard.html">Dashboard</a>
+                    <span>→</span>
+                    <a href="../../app/create.html">Create</a>
+                    <span>→</span>
+                    <span>Custom Script</span>
+                  </div>
+                  <h1 class="custom-script_title">Write Your Script</h1>
+                </div>
+              </div>
+              <!--  Steps Navigation  -->
+              <div class="custom-script_steps-wrapper">
+                <div class="custom-script_steps">
+                  <div class="custom-script_step is-active">
+                    <div class="custom-script_step-number">1</div>
+                    <div class="custom-script_step-label">Write Script</div>
+                  </div>
+                  <div class="custom-script_step-divider"></div>
+                  <div class="custom-script_step">
+                    <div class="custom-script_step-number">2</div>
+                    <div class="custom-script_step-label">Configure</div>
+                  </div>
+                  <div class="custom-script_step-divider"></div>
+                  <div class="custom-script_step">
+                    <div class="custom-script_step-number">3</div>
+                    <div class="custom-script_step-label">Preview</div>
+                  </div>
+                  <div class="custom-script_step-divider"></div>
+                  <div class="custom-script_step">
+                    <div class="custom-script_step-number">4</div>
+                    <div class="custom-script_step-label">Generate</div>
+                  </div>
+                </div>
+              </div>
+              <!--  Main Content - Bento Grid Layout  -->
+              <div class="custom-script_main">
+                <!--  Top Analysis Section  -->
+                <div class="custom-script_analysis-section">
+                  <div class="custom-script_analysis-card">
+                    <div class="custom-script_analysis-icon">📝</div>
+                    <div class="custom-script_analysis-value" w-el="char-count">0</div>
+                    <div class="custom-script_analysis-label">Characters</div>
+                  </div>
+                  <div class="custom-script_analysis-card">
+                    <div class="custom-script_analysis-icon">⏱️</div>
+                    <div class="custom-script_analysis-value" w-el="estimated-time">0s</div>
+                    <div class="custom-script_analysis-label">Est. Reading Time</div>
+                  </div>
+                  <div class="custom-script_analysis-card">
+                    <div class="custom-script_analysis-icon">📊</div>
+                    <div class="custom-script_analysis-value" w-el="readability-score">-</div>
+                    <div class="custom-script_analysis-label">Readability</div>
+                  </div>
+                </div>
+                <!--  Form Section  -->
+                <div class="custom-script_form-section">
+                  <div class="custom-script_form-header">
+                    <h2 class="custom-script_form-title">Your Video Script</h2>
+                    <p class="custom-script_form-subtitle">
+                      Write your video script below. Make it engaging and concise for maximum impact on social media platforms.
+                    </p>
+                  </div>
+                  <form w-el="custom-script-form" id="customScriptForm">
+                    <!--  Script Content  -->
+                    <div class="custom-script_field">
+                      <label class="custom-script_label" for="script-content">
+                        Script Content
+                        <span class="custom-script_label-required">*</span>
+                      </label>
+                      <textarea class="custom-script_textarea" id="script-content" name="script-content" w-el="script-textarea" placeholder="Start writing your video script here...
+Example:
+Hey there! Today I'm sharing 5 game-changing productivity hacks that will transform your daily routine.
+First, try the 2-minute rule - if something takes less than 2 minutes, do it immediately instead of adding it to your to-do list.
+Second, batch similar tasks together. Reply to all emails at once instead of checking throughout the day.
+What's your favorite productivity tip? Let me know in the comments below!" required=""></textarea>
+                      <div class="custom-script_field-meta">
+                        <div class="custom-script_char-count">
+                          <span w-el="word-count">0 words</span>
+                          <span>/</span>
+                          <span w-el="char-limit">800</span>
+                          <span>char limit</span>
+                        </div>
+                      </div>
+                    </div>
+                    <!--  Configuration Grid  -->
+                    <div class="custom-script_select-grid">
+                      <div class="custom-script_field">
+                        <label class="custom-script_label" for="duration">
+                          Duration
+                          <span class="custom-script_label-required">*</span>
+                        </label>
+                        <select class="custom-script_select" id="duration" name="duration" w-el="duration-select" required="">
+                          <option value="">Select duration</option>
+                          <option value="15">15 seconds</option>
+                          <option value="30">30 seconds</option>
+                          <option value="45">45 seconds</option>
+                          <option value="60">60 seconds</option>
+                        </select>
+                      </div>
+                      <div class="custom-script_field">
+                        <label class="custom-script_label" for="platform">
+                          Platform
+                          <span class="custom-script_label-required">*</span>
+                        </label>
+                        <select class="custom-script_select" id="platform" name="platform" w-el="platform-select" required="">
+                          <option value="">Select platform</option>
+                          <option value="tiktok">TikTok</option>
+                          <option value="instagram">Instagram Reels</option>
+                          <option value="youtube">YouTube Shorts</option>
+                          <option value="general">All Platforms</option>
+                        </select>
+                      </div>
+                      <div class="custom-script_field">
+                        <label class="custom-script_label" for="tone">
+                          Tone
+                          <span class="custom-script_label-required">*</span>
+                        </label>
+                        <select class="custom-script_select" id="tone" name="tone" w-el="tone-select" required="">
+                          <option value="">Select tone</option>
+                          <option value="casual">Casual & Friendly</option>
+                          <option value="energetic">Energetic & Dynamic</option>
+                          <option value="professional">Professional</option>
+                          <option value="humorous">Humorous & Fun</option>
+                        </select>
+                      </div>
+                      <div class="custom-script_field">
+                        <label class="custom-script_label" for="content-type">
+                          Content Type
+                          <span class="custom-script_label-required">*</span>
+                        </label>
+                        <select class="custom-script_select" id="content-type" name="content-type" w-el="content-type-select" required="">
+                          <option value="">Select type</option>
+                          <option value="educational">Educational</option>
+                          <option value="entertainment">Entertainment</option>
+                          <option value="promotional">Promotional</option>
+                          <option value="inspirational">Inspirational</option>
+                        </select>
+                      </div>
+                    </div>
+                    <!--  Navigation  -->
+                    <div class="custom-script_navigation">
+                      <div class="custom-script_nav-left">
+                        <a href="../../app/create.html" class="button is-secondary">← Back to Create</a>
+                        <button type="button" class="button is-alternate" w-el="save-draft-btn">Save Draft</button>
+                      </div>
+                      <button type="submit" class="button" w-el="continue-btn" disabled="">Continue to Preview →</button>
+                    </div>
+                  </form>
+                </div>
+                <!--  Tips Section  -->
+                <div class="custom-script_tips-section">
+                  <!--  Writing Tips  -->
+                  <div class="custom-script_tips-card">
+                    <h3 class="custom-script_card-title">
+                      💡 Writing Tips
+                    </h3>
+                    <ul class="custom-script_tips-list">
+                      <li class="custom-script_tips-item">
+                        <span class="custom-script_tips-icon">1.</span>
+                        <span>Start with a strong hook in the first 3 seconds to grab attention</span>
+                      </li>
+                      <li class="custom-script_tips-item">
+                        <span class="custom-script_tips-icon">2.</span>
+                        <span>Keep sentences short and punchy for better readability</span>
+                      </li>
+                      <li class="custom-script_tips-item">
+                        <span class="custom-script_tips-icon">3.</span>
+                        <span>Include a clear call-to-action at the end</span>
+                      </li>
+                      <li class="custom-script_tips-item">
+                        <span class="custom-script_tips-icon">4.</span>
+                        <span>Use visual cues like [PAUSE] or [EMPHASIS] for better pacing</span>
+                      </li>
+                      <li class="custom-script_tips-item">
+                        <span class="custom-script_tips-icon">5.</span>
+                        <span>Write conversationally - imagine speaking to a friend</span>
+                      </li>
+                    </ul>
+                  </div>
+                  <!--  Platform Guidelines  -->
+                  <div class="custom-script_platform-card">
+                    <h3 class="custom-script_card-title">
+                      🎯 Platform Guidelines
+                    </h3>
+                    <div w-el="platform-guidelines">
+                      <div class="custom-script_preview-content">
+                        Select a platform above to see specific guidelines and best practices.
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </body>
+          </html>
+        </div>
+        <div class="w-embed w-script">
+          <!DOCTYPE html>
+          <html lang="fr">
+          <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Script Tool - Webflow</title>
+          </head>
+          <body>
+            <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('Custom Script page loaded');
+            // Form elements
+            const form = document.getElementById('customScriptForm');
+            const textarea = document.querySelector('[w-el="script-textarea"]');
+            const charCountEl = document.querySelector('[w-el="char-count"]');
+            const charLimitEl = document.querySelector('[w-el="char-limit"]');
+            const wordCountEl = document.querySelector('[w-el="word-count"]');
+            const continueBtn = document.querySelector('[w-el="continue-btn"]');
+            const saveDraftBtn = document.querySelector('[w-el="save-draft-btn"]');
+            const estimatedTimeEl = document.querySelector('[w-el="estimated-time"]');
+            const readabilityScoreEl = document.querySelector('[w-el="readability-score"]');
+            const scriptAnalysisEl = document.querySelector('[w-el="script-analysis"]');
+            const platformGuidelinesEl = document.querySelector('[w-el="platform-guidelines"]');
+            // Select elements
+            const durationSelect = document.querySelector('[w-el="duration-select"]');
+            const platformSelect = document.querySelector('[w-el="platform-select"]');
+            const toneSelect = document.querySelector('[w-el="tone-select"]');
+            const contentTypeSelect = document.querySelector('[w-el="content-type-select"]');
+            // Character and word limits
+            const charLimit = 800;
+            const wordsPerMinute = 150;
+            // Platform guidelines data
+            const platformGuidelines = {
+                tiktok: {
+                    title: "TikTok Best Practices",
+                    content: "• Start with trending sounds or hashtags<br>• Use quick cuts and dynamic pacing<br>• Include text overlays for key points<br>• Hook viewers in first 3 seconds<br>• Keep it entertaining and authentic"
+                },
+                instagram: {
+                    title: "Instagram Reels Tips",
+                    content: "• Focus on aesthetic visuals<br>• Use Instagram-native features<br>• Include trending audio or music<br>• Add captions for accessibility<br>• Encourage saves and shares"
+                },
+                youtube: {
+                    title: "YouTube Shorts Guidelines",
+                    content: "• Clear value proposition upfront<br>• Educational or entertaining content<br>• Include strong call-to-action<br>• Optimize for watch time<br>• Use compelling thumbnails"
+                },
+                general: {
+                    title: "Universal Best Practices",
+                    content: "• Focus on storytelling<br>• Keep it concise and engaging<br>• Use universal themes<br>• Include emotional triggers<br>• End with clear next steps"
+                }
+            };
+            // Update character and word count
+            function updateCounts() {
+                if (!textarea) return;
+                const text = textarea.value;
+                const charCount = text.length;
+                const wordCount = text.trim() ? text.trim().split(/\s+/).length : 0;
+                // Update top analysis cards
+                const topCharCountEl = document.querySelector('.custom-script_analysis-section [w-el="char-count"]');
+                if (topCharCountEl) {
+                    topCharCountEl.textContent = charCount;
+                }
+                if (wordCountEl) {
+                    wordCountEl.textContent = `${wordCount} words`;
+                }
+                // Update character count styling
+                if (charCountEl) {
+                    const charCountContainer = charCountEl.closest('.custom-script_char-count');
+                    if (charCountContainer) {
+                        charCountContainer.classList.remove('is-warning', 'is-danger');
+                        if (charCount > charLimit * 0.9) {
+                            charCountContainer.classList.add('is-danger');
+                        } else if (charCount > charLimit * 0.75) {
+                            charCountContainer.classList.add('is-warning');
+                        }
+                    }
+                }
+                // Calculate estimated reading time
+                const estimatedSeconds = Math.ceil((wordCount / wordsPerMinute) * 60);
+                const topEstimatedTimeEl = document.querySelector('.custom-script_analysis-section [w-el="estimated-time"]');
+                if (topEstimatedTimeEl) {
+                    topEstimatedTimeEl.textContent = `${estimatedSeconds}s`;
+                }
+                if (estimatedTimeEl) {
+                    estimatedTimeEl.textContent = `${estimatedSeconds}s`;
+                }
+                // Calculate readability score (simplified)
+                const readabilityScore = calculateReadabilityScore(text);
+                const topReadabilityEl = document.querySelector('.custom-script_analysis-section [w-el="readability-score"]');
+                if (topReadabilityEl) {
+                    topReadabilityEl.textContent = readabilityScore;
+                }
+                if (readabilityScoreEl) {
+                    readabilityScoreEl.textContent = readabilityScore;
+                }
+                // Update script analysis
+                updateScriptAnalysis(text, wordCount, estimatedSeconds);
+                // Validate form
+                validateForm();
+            }
+            // Calculate simple readability score
+            function calculateReadabilityScore(text) {
+                if (!text.trim()) return '-';
+                const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+                const words = text.trim().split(/\s+/);
+                const avgWordsPerSentence = words.length / sentences.length;
+                if (avgWordsPerSentence <= 15) return 'Easy';
+                if (avgWordsPerSentence <= 20) return 'Good';
+                return 'Hard';
+            }
+            // Update script analysis
+            function updateScriptAnalysis(text, wordCount, estimatedSeconds) {
+                if (!scriptAnalysisEl) return;
+                if (!text.trim()) {
+                    scriptAnalysisEl.innerHTML = 'Start writing your script to see real-time analysis and estimated reading time.';
+                    return;
+                }
+                let analysis = '';
+                // Hook analysis
+                const firstSentence = text.split(/[.!?]/)[0];
+                if (firstSentence.length > 0) {
+                    const hasStrongHook = /^(hey|wow|did you know|imagine|what if|here's|today)/i.test(firstSentence.trim());
+                    analysis += hasStrongHook ? 
+                        '✅ Strong opening hook detected<br>' : 
+                        '⚠️ Consider starting with a stronger hook<br>';
+                }
+                // Length analysis
+                if (durationSelect && durationSelect.value) {
+                    const targetWords = (parseInt(durationSelect.value) / 60) * wordsPerMinute;
+                    const wordDiff = Math.abs(wordCount - targetWords);
+                    const tolerance = targetWords * 0.2; // 20% tolerance
+                    if (wordDiff <= tolerance) {
+                        analysis += '✅ Script length matches target duration<br>';
+                    } else if (wordCount > targetWords) {
+                        analysis += '⚠️ Script might be too long for selected duration<br>';
+                    } else {
+                        analysis += '⚠️ Script might be too short for selected duration<br>';
+                    }
+                }
+                // Call-to-action analysis
+                const hasCTA = /like|subscribe|follow|comment|share|visit|check out|link|bio/i.test(text);
+                analysis += hasCTA ? 
+                    '✅ Call-to-action detected<br>' : 
+                    '⚠️ Consider adding a call-to-action<br>';
+                scriptAnalysisEl.innerHTML = analysis || 'Looking good so far!';
+            }
+            // Update platform guidelines
+            function updatePlatformGuidelines() {
+                if (!platformGuidelinesEl) return;
+                const selectedPlatform = platformSelect ? platformSelect.value : null;
+                if (selectedPlatform && platformGuidelines[selectedPlatform]) {
+                    const guidelines = platformGuidelines[selectedPlatform];
+                    platformGuidelinesEl.innerHTML = `
+                        <div class="custom-script_preview-content">
+                            <strong>${guidelines.title}</strong><br><br>
+                            ${guidelines.content}
+                        </div>
+                    `;
+                } else {
+                    platformGuidelinesEl.innerHTML = `
+                        <div class="custom-script_preview-content">
+                            Select a platform above to see specific guidelines and best practices.
+                        </div>
+                    `;
+                }
+            }
+            // Validate form
+            function validateForm() {
+                if (!textarea || !continueBtn) return;
+                const script = textarea.value.trim();
+                const duration = durationSelect ? durationSelect.value : null;
+                const platform = platformSelect ? platformSelect.value : null;
+                const tone = toneSelect ? toneSelect.value : null;
+                const contentType = contentTypeSelect ? contentTypeSelect.value : null;
+                const isValid = script && 
+                               script.length >= 50 && 
+                               script.length <= charLimit &&
+                               duration && 
+                               platform && 
+                               tone && 
+                               contentType;
+                continueBtn.disabled = !isValid;
+                continueBtn.style.opacity = isValid ? '1' : '0.6';
+            }
+            // Event listeners
+            if (textarea) {
+                textarea.addEventListener('input', updateCounts);
+            }
+            if (platformSelect) {
+                platformSelect.addEventListener('change', function() {
+                    updatePlatformGuidelines();
+                    updateCounts();
+                });
+            }
+            [durationSelect, toneSelect, contentTypeSelect].forEach(select => {
+                if (select) {
+                    select.addEventListener('change', validateForm);
+                }
+            });
+            // Save draft functionality
+            if (saveDraftBtn) {
+                saveDraftBtn.addEventListener('click', function() {
+                    if (!form) return;
+                    const formData = new FormData(form);
+                    const draftData = {
+                        script: formData.get('script-content'),
+                        duration: formData.get('duration'),
+                        platform: formData.get('platform'),
+                        tone: formData.get('tone'),
+                        contentType: formData.get('content-type'),
+                        timestamp: new Date().toISOString()
+                    };
+                    // Save to localStorage
+                    localStorage.setItem('vidkraftr_script_draft', JSON.stringify(draftData));
+                    // Show success feedback
+                    const originalText = saveDraftBtn.textContent;
+                    saveDraftBtn.textContent = '✓ Saved';
+                    saveDraftBtn.style.backgroundColor = '#22c55e';
+                    setTimeout(() => {
+                        saveDraftBtn.textContent = originalText;
+                        saveDraftBtn.style.backgroundColor = '';
+                    }, 2000);
+                    console.log('Draft saved:', draftData);
+                });
+            }
+            // Load draft on page load
+            function loadDraft() {
+                const savedDraft = localStorage.getItem('vidkraftr_script_draft');
+                if (savedDraft) {
+                    try {
+                        const draftData = JSON.parse(savedDraft);
+                        if (draftData.script && textarea) textarea.value = draftData.script;
+                        if (draftData.duration && durationSelect) durationSelect.value = draftData.duration;
+                        if (draftData.platform && platformSelect) platformSelect.value = draftData.platform;
+                        if (draftData.tone && toneSelect) toneSelect.value = draftData.tone;
+                        if (draftData.contentType && contentTypeSelect) contentTypeSelect.value = draftData.contentType;
+                        updateCounts();
+                        updatePlatformGuidelines();
+                        console.log('Draft loaded:', draftData);
+                    } catch (e) {
+                        console.error('Error loading draft:', e);
+                    }
+                }
+            }
+            // Form submission
+            if (form) {
+                form.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    if (continueBtn && continueBtn.disabled) return;
+                    const formData = new FormData(form);
+                    const scriptData = {
+                        custom_script: formData.get('script-content'),
+                        duration: parseInt(formData.get('duration')),
+                        platform: formData.get('platform'),
+                        tone: formData.get('tone'),
+                        content_type: formData.get('content-type'),
+                        user_id: 'current-user-id'
+                    };
+                    // Store data for preview page
+                    sessionStorage.setItem('vidkraftr_script_data', JSON.stringify(scriptData));
+                    // Navigate to preview
+                    window.location.href = '/app/preview';
+                    console.log('Form submitted:', scriptData);
+                });
+            }
+            // Auto-save while typing (debounced)
+            let autoSaveTimeout;
+            if (textarea) {
+                textarea.addEventListener('input', function() {
+                    clearTimeout(autoSaveTimeout);
+                    autoSaveTimeout = setTimeout(() => {
+                        if (textarea.value.trim().length > 50 && form) {
+                            const formData = new FormData(form);
+                            const draftData = {
+                                script: formData.get('script-content'),
+                                duration: formData.get('duration'),
+                                platform: formData.get('platform'),
+                                tone: formData.get('tone'),
+                                contentType: formData.get('content-type'),
+                                timestamp: new Date().toISOString()
+                            };
+                            localStorage.setItem('vidkraftr_script_draft', JSON.stringify(draftData));
+                        }
+                    }, 3000);
+                });
+            }
+            // Keyboard shortcuts
+            document.addEventListener('keydown', function(e) {
+                // Ctrl+S or Cmd+S to save draft
+                if ((e.ctrlKey || e.metaKey) && e.key === 's') {
+                    e.preventDefault();
+                    if (saveDraftBtn) saveDraftBtn.click();
+                }
+                // Ctrl+Enter or Cmd+Enter to continue
+                if ((e.ctrlKey || e.metaKey) && e.key === 'Enter') {
+                    e.preventDefault();
+                    if (continueBtn && !continueBtn.disabled && form) {
+                        form.submit();
+                    }
+                }
+            });
+            // Set character limit
+            if (charLimitEl) {
+                charLimitEl.textContent = charLimit;
+            }
+            // Initialize
+            loadDraft();
+            updateCounts();
+            updatePlatformGuidelines();
+            // Wized integration
+            if (typeof w !== 'undefined') {
+                w.on('form.submit', function(data) {
+                    console.log('Wized form submission:', data);
+                });
+                if (w.data?.user?.id) {
+                    console.log('User loaded:', w.data.user.id);
+                }
+            }
+            // Text enhancement suggestions
+            function getTextSuggestions(text) {
+                const suggestions = [];
+                if (/\bis\s+\w+ed\b|\bwas\s+\w+ed\b|\bare\s+\w+ed\b|\bwere\s+\w+ed\b/i.test(text)) {
+                    suggestions.push('Consider using active voice for more engaging content');
+                }
+                const fillerWords = /\bum\b|\buh\b|\blike\b|\byou know\b|\bbasically\b|\bactually\b/gi;
+                if (fillerWords.test(text)) {
+                    suggestions.push('Remove filler words for cleaner delivery');
+                }
+                const sentences = text.split(/[.!?]+/).filter(s => s.trim().length > 0);
+                const longSentences = sentences.filter(s => s.trim().split(/\s+/).length > 20);
+                if (longSentences.length > 0) {
+                    suggestions.push('Break down long sentences for better readability');
+                }
+                return suggestions;
+            }
+            // Add suggestions to analysis
+            if (textarea) {
+                textarea.addEventListener('blur', function() {
+                    const text = textarea.value;
+                    if (text.trim().length > 100 && scriptAnalysisEl) {
+                        const suggestions = getTextSuggestions(text);
+                        if (suggestions.length > 0) {
+                            const suggestionHTML = suggestions.map(s => `💡 ${s}`).join('<br>');
+                            scriptAnalysisEl.innerHTML += `<br><br><strong>Suggestions:</strong><br>${suggestionHTML}`;
+                        }
+                    }
+                });
+            }
+        });
+    </script>
+          </body>
+          </html>
+        </div>
+      </main>
+    </main>
+  </div>
+  <script src="https://d3e54v103j8qbb.cloudfront.net/js/jquery-3.5.1.min.dc5e7f18c8.js?site=6831df3f4d8cdbc2351a09c5" type="text/javascript" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+  <script src="../../js/webflow.js" type="text/javascript"></script>
+  <script>
+// Code pour compter les caractères dans le champ de script
+wized.el.add.event("input_script_content", "input", function() {
+  const scriptContent = wized.el.value.get("input_script_content");
+  const charCount = scriptContent.length;
+  wized.el.text.set("script_character_count", charCount);
+});
+// Code pour vérifier si un template a été sélectionné
+wized.el.add.event("btn_select_template", "click", function() {
+  // Supprimer la classe 'is-selected' de tous les templates
+  document.querySelectorAll(".creator_template-item").forEach(item => {
+    item.classList.remove("is-selected");
+  });
+  // Ajouter la classe 'is-selected' au template cliqué
+  const templateItem = wized.el.closest.get();
+  templateItem.classList.add("is-selected");
+  // Afficher le bouton "Continuer"
+  wized.el.display.show("btn_continue_to_customization");
+});
+</script>
+</body>
+</html>

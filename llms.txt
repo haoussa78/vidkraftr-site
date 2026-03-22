@@ -1,0 +1,37 @@
+# VidKraftr
+
+> Script-first AI video generator for faceless content creators
+
+VidKraftr turns ideas into viral faceless videos for TikTok, YouTube Shorts, Instagram Reels, and Facebook Reels. Unlike other AI video tools, VidKraftr uses a script-first approach: AI writes an optimized viral script with hooks, pacing, and emotional triggers, then automatically builds the video around it.
+
+## Core Features
+
+- **AI Script Generation**: Describe any topic → get a platform-optimized viral script with a virality score in seconds
+- **Automated Video Pipeline**: AI splits scripts into scenes, matches HD stock footage from Pexels, adds text overlays and transitions, renders a finished vertical video
+- **Inspiration Mode**: Paste any viral video URL → auto-transcribe → AI analyzes what made it viral → generate a new script using the same patterns for your niche
+- **Style Cards**: Save and reuse visual styles from videos you admire
+- **Multi-Platform Support**: Optimized for TikTok, YouTube Shorts, Instagram Reels, Facebook Reels (9:16 vertical format)
+- **Virality Score**: Every AI-generated script includes a virality prediction score so you only render high-potential content
+
+## Who It's For
+
+- Faceless YouTube channel creators
+- TikTok content monetizers
+- Social media agencies managing multiple accounts
+- E-commerce brands creating product videos
+- Anyone who wants to create short-form video content without a camera or editing skills
+
+## Pricing
+
+- **Free**: $0/mo — 5 scripts, 2 videos per month, basic templates
+- **Pro**: $39/mo — Unlimited scripts, 20 videos per month, all platforms, style cards & inspiration analysis
+- **Team**: $119/mo — Everything in Pro + shared brand kit, priority rendering, API access
+
+## Links
+
+- Homepage: https://vidkraftr.co
+- Features: https://vidkraftr.co/features
+- Pricing: https://vidkraftr.co/pricing
+- Blog: https://vidkraftr.co/blog
+- Sign Up: https://app.vidkraftr.co/signup
+- Login: https://app.vidkraftr.co/login
