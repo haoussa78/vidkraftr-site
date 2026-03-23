@@ -4342,7 +4342,7 @@ figcaption {
   }
 
   .navbar14_menu {
-    background-color: var(--_primitives---opacity--transparent);
+    background-color: rgba(0, 0, 0, 0.4);
     -webkit-text-fill-color: inherit;
     background-clip: border-box;
     justify-content: center;
@@ -4357,10 +4357,19 @@ figcaption {
     border-style: none solid solid;
     border-width: 1px;
     border-color: var(--color-scheme-1--border);
-    background-color: var(--color-scheme-1--background);
+    background-color: #fff;
+    border-radius: 0 0 1rem 1rem;
     flex-direction: column;
     width: 100%;
     padding: 2rem;
+  }
+
+  .navbar14_menu-button.w--open {
+    background-color: transparent;
+  }
+
+  .navbar14_menu-button:focus-visible {
+    outline: none;
   }
 
   .navbar14_link {
