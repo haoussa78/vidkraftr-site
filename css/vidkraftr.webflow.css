@@ -4342,34 +4342,55 @@ figcaption {
   }
 
   .navbar14_menu {
-    background-color: rgba(0, 0, 0, 0.4);
+    background-color: #fff;
     -webkit-text-fill-color: inherit;
     background-clip: border-box;
-    justify-content: center;
-    padding-left: 5%;
-    padding-right: 5%;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 2rem 5%;
     display: flex;
-    position: absolute;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: 100dvh;
     overflow: auto;
+    z-index: 999;
   }
 
   .navbar14_menu-link-wrapper {
-    border-style: none solid solid;
-    border-width: 1px;
-    border-color: var(--color-scheme-1--border);
-    background-color: #fff;
-    border-radius: 0 0 1rem 1rem;
+    border: none;
+    background-color: transparent;
     flex-direction: column;
+    align-items: center;
     width: 100%;
-    padding: 2rem;
+    padding: 4rem 2rem 2rem;
+    gap: 0.5rem;
+  }
+
+  .navbar14_link {
+    text-align: center;
+    font-size: 1.25rem;
+  }
+
+  .navbar14_button-wrapper {
+    margin-top: 1.5rem;
+  }
+
+  .navbar14_menu-button {
+    position: relative;
+    z-index: 1000;
   }
 
   .navbar14_menu-button.w--open {
     background-color: transparent;
   }
 
-  .navbar14_menu-button:focus-visible {
-    outline: none;
+  .navbar14_menu-button:focus-visible,
+  .navbar14_menu-button:focus {
+    outline: none !important;
+    outline-offset: 0 !important;
   }
 
   .navbar14_link {
