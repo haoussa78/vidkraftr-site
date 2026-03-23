@@ -3330,6 +3330,10 @@ figcaption {
   margin: 1.5rem 2rem;
 }
 
+.features-hero {
+  padding-top: 6rem;
+}
+
 .header15_content-wrapper {
   grid-column-gap: 5rem;
   grid-row-gap: 4rem;
@@ -4274,7 +4278,9 @@ figcaption {
     inset: 0%;
   }
 
-  .shell8-layout_component, .pricing19_grid-list {
+  .shell8-layout_component,
+  .pricing19_grid-list,
+  .pricing19_grid-list._2-columns {
     grid-template-columns: 1fr;
   }
 
